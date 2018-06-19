@@ -1,4 +1,4 @@
-"""Solutions to PyBay Project Night CSV workshop.
+"""PyBay Project Night CSV workshop.
 
 This code operates on data obtained from a csv file. 
 The data represents information about monthly cupcake sales.
