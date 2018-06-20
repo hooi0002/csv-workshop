@@ -8,13 +8,14 @@ import csv
 
 
 def print_csv_data(filename):
-    """Prints data from a CSV file.
+    """Prints data from a .csv file.
 
     Inputs:
-    - filename: string, name of the csv file to be read.
+    - filename: string, name of the .csv file to be read
 
     Returns None.
     """
+
     with open(filename, 'r') as csv_file:
         reader = csv.reader(csv_file)
         for row in reader:
@@ -23,14 +24,15 @@ def print_csv_data(filename):
 
 
 def write_to_csv(filename, data):
-    """Writes data to a CSV file.
+    """Writes data to a .csv file.
 
     Inputs:
-    - filename: string, name of the csv file where data will be written.
+    - filename: string, name of the .csv file where data will be written to.
     - data: iterable, each item will be written to a line in the file.
 
     Returns None.
     """
+
     with open(filename, 'w') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerows(data)
