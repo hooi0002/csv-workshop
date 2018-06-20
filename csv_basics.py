@@ -1,7 +1,7 @@
 """CSV Utilities for PyBay Project Night CSV workshop.
 
-This code demonstrates how the csv python standard library can be used to obtain
-data from csv files.
+This code demonstrates how the csv module in the Python standard library can be
+used to obtain data from csv files.
 """
 
 import csv
