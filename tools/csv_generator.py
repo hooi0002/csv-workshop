@@ -1,11 +1,12 @@
 """CSV Generator for PyBay Project Night CSV workshop.
 
-This code generates a csv file with sample monthly cupcake sales data.
-Each line in the resulting file has the data: date, order number, item
+This code generates a .csv file with sample monthly cupcake sales data.
+
+The output file has the fields:
+ date,order number,item
 """
 
 import csv
-import csv_utils
 import datetime
 import math
 import random
@@ -32,7 +33,7 @@ def make_monthly_data(days, month, year, choices):
         date = datetime.date(year, month, i)
         num_sales = random.randint(1, 30)
         for j in range(1, num_sales + 1):
-            num_items = math.floor(max(1, random.gauss(5, 5)))
+            num_items = int(math.floor(max(1, random.gauss(5, 5))))
             for k in range(1, num_items + 1):
                 item = random.choice(choices)
                 line = [date.strftime('%m/%d/%Y'), order_no, item]
@@ -40,6 +41,21 @@ def make_monthly_data(days, month, year, choices):
             order_no += 1
     return data
 
+def write_to_csv(filename, data):
+    """Writes data to a .csv file.
+
+    Inputs:
+    - filename: string, name of the .csv file where data will be written to.
+    - data: iterable, each item will be written to a line in the file.
+
+    Returns None.
+    """
+
+    with open(filename, 'w') as csv_file:
+        writer = csv.writer(csv_file)
+        writer.writerows(data)
+    csv_file.close()
+
 if __name__ == '__main__':
     sales_data = make_monthly_data(31, 5, 2018, flavors)
-    csv_utils.write_to_csv('cupcakes.csv', sales_data)
+    write_to_csv('cupcakes1.csv', sales_data)
