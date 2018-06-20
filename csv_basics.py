@@ -1,4 +1,4 @@
-"""CSV Utilities for PyBay Project Night CSV workshop.
+"""Basic examples for PyBay Project Night CSV workshop.
 
 This code demonstrates how the csv module in the Python standard library can be
 used to obtain data from csv files.
