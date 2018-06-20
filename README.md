@@ -1,5 +1,5 @@
 # csv-workshop
-Workshop exercises to learn the csv python standard library
+Exercises to learn about working with .csv files using Python
 (created for SF Python Project Night)
 
 ## Goals
