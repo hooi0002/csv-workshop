@@ -14,6 +14,10 @@ To read from and write to .csv files, we'll use the csv module. Because our
 sample data involves dates, we'll also be using the datetime module. Both
 modules are part of the Python standard library.
 
+### Documentation
+- csv: https://docs.python.org/3/library/csv.html
+- datetime: https://docs.python.org/3/library/datetime.html 
+
 ## Sample Data
 The main file we'll be working with is cupcakes.csv. This file contains 
 information about monthly cupcake sales. Each line in the file is a record of
