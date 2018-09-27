@@ -19,7 +19,7 @@ def print_csv_data(filename):
     with open(filename, 'r') as csv_file:
         reader = csv.reader(csv_file)
         for row in reader:
-            print(', '.join(row))
+            print('*'.join(row))
     csv_file.close()
 
 
@@ -33,7 +33,7 @@ def write_to_csv(filename, data):
     Returns None.
     """
 
-    with open(filename, 'w') as csv_file:
+    with open(filename, 'w+') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerows(data)
     csv_file.close()
